@@ -246,5 +246,10 @@ namespace MetaphysicsIndustries.Collections
         //{
         //    get { return _d1[index]; }
         //}
+
+        public IDictionary<T2, T1> Reverse
+        {
+            get { return _reverse; }
+        }
     }
 }
