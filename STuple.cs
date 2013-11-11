@@ -6,7 +6,7 @@ namespace MetaphysicsIndustries.Collections
 {
     public struct STuple<T1, T2>
     {
-        public Tuple(T1 value1, T2 value2)
+        public STuple(T1 value1, T2 value2)
         {
             Value1 = value1;
             Value2 = value2;
