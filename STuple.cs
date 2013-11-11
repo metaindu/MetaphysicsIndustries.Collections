@@ -4,7 +4,7 @@ using System.Text;
 
 namespace MetaphysicsIndustries.Collections
 {
-    public struct Tuple<T1, T2>
+    public struct STuple<T1, T2>
     {
         public Tuple(T1 value1, T2 value2)
         {
@@ -16,9 +16,9 @@ namespace MetaphysicsIndustries.Collections
         public T2 Value2;
     }
 
-    public struct Tuple<T1, T2, T3>
+    public struct STuple<T1, T2, T3>
     {
-        public Tuple(T1 value1, T2 value2, T3 value3)
+        public STuple(T1 value1, T2 value2, T3 value3)
         {
             Value1 = value1;
             Value2 = value2;

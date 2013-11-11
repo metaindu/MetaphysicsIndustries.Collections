@@ -71,7 +71,7 @@
     <Compile Include="TreeList.Enumerator.cs" />
     <Compile Include="TreeList.Node.cs" />
     <Compile Include="Triple.cs" />
-    <Compile Include="Tuple.cs" />
+    <Compile Include="STuple.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Key.snk" />

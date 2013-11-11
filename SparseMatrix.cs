@@ -5,7 +5,7 @@ using System.Diagnostics;
 
 namespace MetaphysicsIndustries.Collections
 {
-    public class SparseMatrix<T> : ICollection<Tuple<int, int, T>>
+    public class SparseMatrix<T> : ICollection<STuple<int, int, T>>
     {
         Dictionary<Pair<int>, T> _dictionary = new Dictionary<Pair<int>, T>();
 
@@ -61,7 +61,7 @@ namespace MetaphysicsIndustries.Collections
 
         #region ICollection<Tuple<int,int,T>> Members
 
-        public void Add(Tuple<int,int,T> item)
+        public void Add(STuple<int,int,T> item)
         {
             Add(item.Value1, item.Value2, item.Value3);
         }
@@ -71,7 +71,7 @@ namespace MetaphysicsIndustries.Collections
             _dictionary.Clear();
         }
 
-        public bool Contains(Tuple<int,int,T> item)
+        public bool Contains(STuple<int,int,T> item)
         {
             if (!ContainsKey(item.Value1, item.Value2)) return false;
 
@@ -84,9 +84,9 @@ namespace MetaphysicsIndustries.Collections
             return true;
         }
 
-        public void CopyTo(Tuple<int,int,T>[] array, int arrayIndex)
+        public void CopyTo(STuple<int,int,T>[] array, int arrayIndex)
         {
-            foreach (Tuple<int, int, T> item in this)
+            foreach (STuple<int, int, T> item in this)
             {
                 array[arrayIndex] = item;
                 arrayIndex++;
@@ -103,7 +103,7 @@ namespace MetaphysicsIndustries.Collections
             get { return false; }
         }
 
-        public bool Remove(Tuple<int,int,T> item)
+        public bool Remove(STuple<int,int,T> item)
         {
             if (!Contains(item))
             //!this[item.Value1, item.Value2].Equals(item.Value3)
@@ -118,11 +118,11 @@ namespace MetaphysicsIndustries.Collections
 
         #region IEnumerable<KeyValuePair<int,T>> Members
 
-        public IEnumerator<Tuple<int,int,T>> GetEnumerator()
+        public IEnumerator<STuple<int,int,T>> GetEnumerator()
         {
             foreach (Pair<int> key in _dictionary.Keys)
             {
-                yield return new Tuple<int, int, T>(key.First, key.Second, _dictionary[key]);
+                yield return new STuple<int, int, T>(key.First, key.Second, _dictionary[key]);
             }
 
             yield break;
