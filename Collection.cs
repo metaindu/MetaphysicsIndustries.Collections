@@ -6,12 +6,12 @@ namespace MetaphysicsIndustries.Collections
 {
     public static class Collection
     {
-        public static void AddRange<T, U>(ICollection<T> collection, params U[] items)
+        public static void AddRange<T, U>(this ICollection<T> collection, params U[] items)
             where U : T
         {
             AddRange(collection, (IEnumerable<U>)items);
         }
-        public static void AddRange<T, U>(ICollection<T> collection, IEnumerable<U> items)
+        public static void AddRange<T, U>(this ICollection<T> collection, IEnumerable<U> items)
             where U : T
         {
             U[] temp;
@@ -31,12 +31,12 @@ namespace MetaphysicsIndustries.Collections
             }
         }
 
-        public static void RemoveRange<T, U>(ICollection<T> collection, params U[] items)
+        public static void RemoveRange<T, U>(this ICollection<T> collection, params U[] items)
             where U : T
         {
             RemoveRange(collection, (IEnumerable<U>)items);
         }
-        public static void RemoveRange<T, U>(ICollection<T> collection, IEnumerable<U> items)
+        public static void RemoveRange<T, U>(this ICollection<T> collection, IEnumerable<U> items)
             where U : T
         {
             foreach (U item in items)
@@ -45,7 +45,7 @@ namespace MetaphysicsIndustries.Collections
             }
         }
 
-        public static void RemoveAll<T, U>(ICollection<T> collection, U item)
+        public static void RemoveAll<T, U>(this ICollection<T> collection, U item)
             where U : T
         {
             T[] items = new T[collection.Count];
