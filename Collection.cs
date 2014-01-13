@@ -249,5 +249,56 @@ namespace MetaphysicsIndustries.Collections
 
             return processed.ToArray();
         }
+
+
+
+
+        public static void AddToSet<TKey, TValueElement>(this Dictionary<TKey, Set<TValueElement>> dictionary, TKey key, TValueElement value)
+        {
+            if (!dictionary.ContainsKey(key))
+            {
+                dictionary.Add(key, new Set<TValueElement>());
+            }
+
+            dictionary[key].Add(value);
+        }
+
+        public static void AddRangeToSet<TKey, TValueElement>(this Dictionary<TKey, Set<TValueElement>> dictionary, TKey key, IEnumerable<TValueElement> values)
+        {
+            if (!dictionary.ContainsKey(key))
+            {
+                dictionary.Add(key, new Set<TValueElement>());
+            }
+
+            dictionary[key].AddRange(values);
+        }
+
+        public static void EnqueueRange<T>(this Queue<T> queue, IEnumerable<T> items)
+        {
+            foreach (var item in items)
+            {
+                queue.Enqueue(item);
+            }
+        }
+
+        public static void AddToQueue<TKey, TValueElement>(this Dictionary<TKey, Queue<TValueElement>> dictionary, TKey key, TValueElement value)
+        {
+            if (!dictionary.ContainsKey(key))
+            {
+                dictionary.Add(key, new Queue<TValueElement>());
+            }
+
+            dictionary[key].Enqueue(value);
+        }
+
+        public static void AddRangeToQueue<TKey, TValueElement>(this Dictionary<TKey, Queue<TValueElement>> dictionary, TKey key, IEnumerable<TValueElement> values)
+        {
+            if (!dictionary.ContainsKey(key))
+            {
+                dictionary.Add(key, new Queue<TValueElement>());
+            }
+
+            dictionary[key].EnqueueRange(values);
+        }
     }
 }
