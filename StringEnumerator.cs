@@ -1,17 +1,23 @@
 
-/*****************************************************************************
- *                                                                           *
- *  StringEnumerator.cs                                                      *
- *  19 June 2007                                                             *
- *  Project: MetaphysicsIndustries.Build                                     *
- *  Written by: Richard Sartor                                               *
- *  Copyright © 2007 Metaphysics Industries, Inc.                            *
- *                                                                           *
- *  Converted from C++ to C# on 4 August 2007                                *
- *                                                                           *
- *  An enumerator class that simplifies the process of deserialization.      *
- *                                                                           *
- *****************************************************************************/
+/*
+ *  MetaphysicsIndustries.Collections
+ *  Copyright (C) 2014 Metaphysics Industries, Inc., Richard Sartor
+ *
+ *  This program is free software; you can redistribute it and/or modify
+ *  it under the terms of the GNU General Public License as published by
+ *  the Free Software Foundation; either version 2 of the License, or
+ *  (at your option) any later version.
+ *
+ *  This program is distributed in the hope that it will be useful,
+ *  but WITHOUT ANY WARRANTY; without even the implied warranty of
+ *  MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the
+ *  GNU General Public License for more details.
+ *
+ *  You should have received a copy of the GNU General Public License along
+ *  with this program; if not, write to the Free Software Foundation, Inc.,
+ *  51 Franklin Street, Fifth Floor, Boston, MA 02110-1301 USA.
+ * 
+ */
 
 using System;
 using System.Collections.Generic;
@@ -19,7 +25,11 @@ using MetaphysicsIndustries.Collections;
 
 namespace MetaphysicsIndustries.Collections
 {
-	public class StringEnumerator : AutoEnumerator<string>
+    /*
+     *  An enumerator class that simplifies the process of deserialization.      *
+     */
+
+    public class StringEnumerator : AutoEnumerator<string>
 	{
 		public StringEnumerator(IEnumerator<string> __base) : base(__base)
 		{

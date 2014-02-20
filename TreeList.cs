@@ -1,19 +1,23 @@
 
-/*****************************************************************************
- *                                                                           *
- *  TreeList.cs                                                              *
- *  6 October 2007                                                           *
- *  Project: MetaphysicsIndustries.Collections assembly                      *
- *  Written by: Richard Sartor                                               *
- *  Copyright © 2007 Metaphysics Industries                                  *
- *                                                                           *
- *  A binary tree that acts as a list. Insertions, deletions, and            *
- *    arbitrary access via list index all have O(log n) running time,        *
- *    which is about half-way between List and LinkedList. Nodes are         *
- *    interconnected, like a linked list, for more efficient sequential      *
- *    traversal.                                                             *
- *                                                                           *
- *****************************************************************************/
+/*
+ *  MetaphysicsIndustries.Collections
+ *  Copyright (C) 2014 Metaphysics Industries, Inc., Richard Sartor
+ *
+ *  This program is free software; you can redistribute it and/or modify
+ *  it under the terms of the GNU General Public License as published by
+ *  the Free Software Foundation; either version 2 of the License, or
+ *  (at your option) any later version.
+ *
+ *  This program is distributed in the hope that it will be useful,
+ *  but WITHOUT ANY WARRANTY; without even the implied warranty of
+ *  MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the
+ *  GNU General Public License for more details.
+ *
+ *  You should have received a copy of the GNU General Public License along
+ *  with this program; if not, write to the Free Software Foundation, Inc.,
+ *  51 Franklin Street, Fifth Floor, Boston, MA 02110-1301 USA.
+ * 
+ */
 
 using System;
 using System.Collections.Generic;
@@ -21,6 +25,17 @@ using System.Text;
 
 namespace MetaphysicsIndustries.Collections
 {
+    /*
+     *  TreeList
+     * 
+     *  A binary tree that acts as a list. Insertions, deletions, and
+     *  arbitrary access via list index all have O(log n) running time,
+     *  which is about half-way between List and LinkedList. Nodes are
+     *  interconnected, like a linked list, for more efficient sequential
+     *  traversal.
+     * 
+     */
+
     public partial class TreeList<T> : IList<T>, System.Collections.IList
     {
         public TreeList()

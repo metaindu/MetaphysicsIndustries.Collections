@@ -1,18 +1,39 @@
+
+/*
+ *  MetaphysicsIndustries.Collections
+ *  Copyright (C) 2014 Metaphysics Industries, Inc., Richard Sartor
+ *
+ *  This program is free software; you can redistribute it and/or modify
+ *  it under the terms of the GNU General Public License as published by
+ *  the Free Software Foundation; either version 2 of the License, or
+ *  (at your option) any later version.
+ *
+ *  This program is distributed in the hope that it will be useful,
+ *  but WITHOUT ANY WARRANTY; without even the implied warranty of
+ *  MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the
+ *  GNU General Public License for more details.
+ *
+ *  You should have received a copy of the GNU General Public License along
+ *  with this program; if not, write to the Free Software Foundation, Inc.,
+ *  51 Franklin Street, Fifth Floor, Boston, MA 02110-1301 USA.
+ * 
+ */
+
 using System;
 using System.Collections.Generic;
 using System.Text;
 
 namespace MetaphysicsIndustries.Collections
 {
-    //we can't use both IDictionary interfaces because the could result in 2x IDictionary<int,int>, for example.
-    //instead, we'll expose on of the IDictionary interfaces, and provides an interlocutor for the reverse operation.
-
     public class Matchup<T1, T2> : IDictionary<T1,T2>
     {
         public Matchup()
         {
             _reverse = new ReverseMatchup(this);
         }
+
+        //we can't use both IDictionary interfaces because the could result in 2x IDictionary<int,int>, for example.
+        //instead, we'll expose on of the IDictionary interfaces, and provides an interlocutor for the reverse operation.
 
         private Dictionary<T1, T2> _d1 = new Dictionary<T1, T2>();
         private Dictionary<T2, T1> _d2 = new Dictionary<T2, T1>();

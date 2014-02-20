@@ -46,8 +46,6 @@
     <Compile Include="CollectionNotification.cs" />
     <Compile Include="CollectionTypeProxy.cs" />
     <Compile Include="DoWithParams.cs" />
-    <Compile Include="ExtractCollection.cs" />
-    <Compile Include="FilterCollection.cs" />
     <Compile Include="ForgettingDictionary.cs" />
     <Compile Include="ForgettingSet.cs" />
     <Compile Include="Hash.cs" />
@@ -58,9 +56,6 @@
     <Compile Include="LimitedSet.cs" />
     <Compile Include="ListIArrayAdapter.cs" />
     <Compile Include="Matchup.cs" />
-    <Compile Include="Pair.cs" />
-    <Compile Include="PerlArray.cs" />
-    <Compile Include="PriorityQueue.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="ReadOnlyList.cs" />
     <Compile Include="Set.cs" />
@@ -69,7 +64,6 @@
     <Compile Include="TreeList.cs" />
     <Compile Include="TreeList.Enumerator.cs" />
     <Compile Include="TreeList.Node.cs" />
-    <Compile Include="Triple.cs" />
     <Compile Include="STuple.cs" />
   </ItemGroup>
   <ItemGroup>
