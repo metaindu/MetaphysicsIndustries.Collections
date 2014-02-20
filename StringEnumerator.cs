@@ -30,10 +30,9 @@ namespace MetaphysicsIndustries.Collections
      */
 
     public class StringEnumerator : AutoEnumerator<string>
-	{
-		public StringEnumerator(IEnumerator<string> __base) : base(__base)
-		{
-		}
-
-	}
+    {
+        public StringEnumerator(IEnumerator<string> __base) : base(__base)
+        {
+        }
+    }
 }

@@ -46,7 +46,7 @@ namespace MetaphysicsIndustries.Collections
             public ReverseMatchup(Matchup<T1, T2> parent)
             {
                 if (parent == null) { throw new ArgumentNullException("parent"); }
-							
+
                 _parent = parent;
             }
 
