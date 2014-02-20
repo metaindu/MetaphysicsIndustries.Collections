@@ -28,34 +28,34 @@ namespace MetaphysicsIndustries.Collections
 {
     public class SparseMatrix<T> : ICollection<STuple<int, int, T>>
     {
-        Dictionary<Pair<int>, T> _dictionary = new Dictionary<Pair<int>, T>();
+        readonly Dictionary<STuple<int, int>, T> _dictionary = new Dictionary<STuple<int, int>, T>();
 
 
-        #region IDictionary<int,T> Members
+        #region IDictionary<int,int,T> Members
 
         public void Add(int x, int y, T value)
         {
-            _dictionary.Add(new Pair<int>(x, y), value);
+            _dictionary.Add(new STuple<int, int>(x, y), value);
         }
 
         public bool ContainsKey(int x, int y)
         {
-            return _dictionary.ContainsKey(new Pair<int>(x, y));
+            return _dictionary.ContainsKey(new STuple<int, int>(x, y));
         }
 
-        public ICollection<Pair<int>> Keys
+        public ICollection<STuple<int, int>> Keys
         {
             get { return _dictionary.Keys; }
         }
 
         public bool Remove(int x, int y)
         {
-            return _dictionary.Remove(new Pair<int>(x, y));
+            return _dictionary.Remove(new STuple<int, int>(x, y));
         }
 
         public bool TryGetValue(int x, int y, out T value)
         {
-            return _dictionary.TryGetValue(new Pair<int>(x, y), out value);
+            return _dictionary.TryGetValue(new STuple<int, int>(x, y), out value);
         }
 
         public ICollection<T> Values
@@ -70,11 +70,11 @@ namespace MetaphysicsIndustries.Collections
                 //maybe we should check that it exists in the dictionary
                 //if not, return null
                 //that retains the 2D array feel
-                return _dictionary[new Pair<int>(x, y)];
+                return _dictionary[new STuple<int, int>(x, y)];
             }
             set
             {
-                _dictionary[new Pair<int>(x, y)] = value;
+                _dictionary[new STuple<int, int>(x, y)] = value;
             }
         }
 
@@ -141,9 +141,9 @@ namespace MetaphysicsIndustries.Collections
 
         public IEnumerator<STuple<int,int,T>> GetEnumerator()
         {
-            foreach (Pair<int> key in _dictionary.Keys)
+            foreach (STuple<int, int> key in _dictionary.Keys)
             {
-                yield return new STuple<int, int, T>(key.First, key.Second, _dictionary[key]);
+                yield return new STuple<int, int, T>(key.Value1, key.Value2, _dictionary[key]);
             }
 
             yield break;
