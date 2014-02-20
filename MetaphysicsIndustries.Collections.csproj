@@ -73,7 +73,9 @@
     <Compile Include="STuple.cs" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Key.snk" />
+    <None Include="AUTHORS.rst" />
+    <None Include="TODO" />
+    <None Include="HISTORY.rst" />
   </ItemGroup>
   <ItemGroup>
     <Service Include="{B4F97281-0DBD-4835-9ED8-7DFB966E87FF}" />
