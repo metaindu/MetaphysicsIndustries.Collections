@@ -1,0 +1,94 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003" ToolsVersion="4.0">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>8.0.50727</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{FF2B8A90-E8D2-4CF6-81E6-4A7BCE1FF900}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>MetaphysicsIndustries.Collections</RootNamespace>
+    <AssemblyName>MetaphysicsIndustries.Collections</AssemblyName>
+    <SignAssembly>true</SignAssembly>
+    <AssemblyOriginatorKeyFile>Key.snk</AssemblyOriginatorKeyFile>
+    <TargetFrameworkVersion>v2.0</TargetFrameworkVersion>
+    <FileUpgradeFlags>
+    </FileUpgradeFlags>
+    <OldToolsVersion>2.0</OldToolsVersion>
+    <UpgradeBackupLocation />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="AutoEnumerator.cs" />
+    <Compile Include="BiDictionary.cs" />
+    <Compile Include="Collection.cs" />
+    <Compile Include="CollectionNotification.cs" />
+    <Compile Include="CollectionTypeProxy.cs" />
+    <Compile Include="DoWithParams.cs" />
+    <Compile Include="ExtractCollection.cs" />
+    <Compile Include="FilterCollection.cs" />
+    <Compile Include="ForgettingDictionary.cs" />
+    <Compile Include="ForgettingSet.cs" />
+    <Compile Include="Hash.cs" />
+    <Compile Include="IArray.cs" />
+    <Compile Include="INotifyCollection.cs" />
+    <Compile Include="ISet.cs" />
+    <Compile Include="LimitedDictionary.cs" />
+    <Compile Include="LimitedSet.cs" />
+    <Compile Include="ListIArrayAdapter.cs" />
+    <Compile Include="Matchup.cs" />
+    <Compile Include="Pair.cs" />
+    <Compile Include="PerlArray.cs" />
+    <Compile Include="PriorityQueue.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="ReadOnlyList.cs" />
+    <Compile Include="Set.cs" />
+    <Compile Include="SparseMatrix.cs" />
+    <Compile Include="StringEnumerator.cs" />
+    <Compile Include="TreeList.cs" />
+    <Compile Include="TreeList.Enumerator.cs" />
+    <Compile Include="TreeList.Node.cs" />
+    <Compile Include="Triple.cs" />
+    <Compile Include="Tuple.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Key.snk" />
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{B4F97281-0DBD-4835-9ED8-7DFB966E87FF}" />
+  </ItemGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+  <PropertyGroup>
+    <PostBuildEvent>
+    </PostBuildEvent>
+  </PropertyGroup>
+</Project>
