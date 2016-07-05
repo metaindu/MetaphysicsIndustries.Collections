@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<package >
+  <metadata>
+    <id>$id$</id>
+    <version>$version$</version>
+    <authors>$author$</authors>
+    <owners>$author$</owners>
+    <licenseUrl>ihttps://github.com/metaindu/MetaphysicsIndustries.Collections/blob/master/LICENSE</licenseUrl>
+    <projectUrl>https://github.com/metaindu/MetaphysicsIndustries.Collections</projectUrl>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <description>$description$</description>
+    <releaseNotes>Initial release.</releaseNotes>
+    <copyright>Copyright 2014</copyright>
+    <tags>collections</tags>
+  </metadata>
+</package>
